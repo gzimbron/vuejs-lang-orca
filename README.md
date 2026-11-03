@@ -7,6 +7,42 @@ single-file components (`.vue`) in **Orca 1.4.246 or newer**.
 Vue compiler, commands, or runtime code. The plugin uses Orca's `data` execution
 profile and requests no capabilities. You do not need Node.js to use it in Orca.
 
+## Installation
+
+Requires **Orca 1.4.246 or newer**. No npm package, dependency installation,
+Node.js, or build step is required to use the plugin.
+
+1. Open **Settings → Plugins** in Orca and choose to add a plugin.
+2. In the installation dialog, select **Git URL**.
+3. Paste this repository URL:
+
+   ```text
+   https://github.com/gzimbron/vuejs-lang-orca
+   ```
+
+4. Click **Continue**, then review and activate **Vue.js Syntax**.
+
+Without a `#tag` or `#commit`, Orca uses the latest version tag. To install
+version **1.0.0** explicitly, use:
+
+```text
+https://github.com/gzimbron/vuejs-lang-orca#v1.0.0
+```
+
+No manual download, clone, or development folder is needed.
+
+### Verify highlighting
+
+Open any `.vue` file in Orca's source editor. Tags, Vue directives, script
+keywords, strings, and CSS should be highlighted; the exact colors depend on
+your theme. No autocomplete menu is added.
+
+If highlighting is missing, check that **Vue.js Syntax** is enabled in
+**Settings → Plugins** and that the file ends in `.vue`. Close and reopen the
+file after enabling the plugin.
+
+To stop using it, disable **Vue.js Syntax** in **Settings → Plugins**.
+
 ## What it highlights
 
 - HTML/component tags, attributes, quoted values, entities, and HTML comments.
@@ -25,7 +61,7 @@ The original TextMate JSON grammar includes its modest JS/TS/CSS rules locally;
 it does not rely on external `source.js`, `source.ts`, or `source.css` grammars
 (which Orca would leave unresolved). Colors depend on your active Orca theme.
 
-## Try it locally
+## Validate and preview during development
 
 From this project directory, with the Orca CLI installed:
 
